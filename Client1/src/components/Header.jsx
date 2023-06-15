@@ -14,6 +14,7 @@ const Header = ({ wallet }) => {
     if (wallet) {
       try {
         await wallet.connect();
+        console.log(wallet)
         // You might want to add some state here to show that the wallet is connected
         console.log("Wallet connected successfully");
       } catch (err) {

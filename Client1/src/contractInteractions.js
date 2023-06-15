@@ -5,6 +5,7 @@ const CONTRACT_ADDRESS = "0xab3aa7287c869844f32b36bc53761456b27621e0a3d3e57341ea
 const MODULE_NAME = "habit_list";
 
 export const addHabit = async (wallet, client, habitName) => {
+  console.log(wallet)
   if (!wallet || !client) {
     throw new Error("Wallet or client not initialized");
   }

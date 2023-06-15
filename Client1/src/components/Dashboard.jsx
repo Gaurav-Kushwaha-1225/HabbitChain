@@ -32,6 +32,7 @@ const Dashboard = ({ wallet, client, isConnected, connectWallet }) => {
         setLoading(true);
         const userAddress = await wallet.account();
         const userHabits = await getHabits(client, userAddress);
+        console.log(userAddress)
         if (userHabits.length === 0) {
           // Keep the initial temporary habits if no real data is available
           setHabits(initialHabits);
@@ -83,6 +84,7 @@ const Dashboard = ({ wallet, client, isConnected, connectWallet }) => {
     e.preventDefault();
     if (wallet && client) {
       try {
+        console.log(wallet)
         await addHabit(wallet, client, habitName, habitFrequency, habitGoal);
         setHabitName("");
         setHabitGoal("");
@@ -98,6 +100,7 @@ const Dashboard = ({ wallet, client, isConnected, connectWallet }) => {
   };
 
   if (!isConnected) {
+    console.log(wallet)
     return (
       <div className="dashboard bg-n-8 min-h-screen flex items-center justify-center">
         <div className="text-center">
