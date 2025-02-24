@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 
 function hexToUint8Array(hex) {
   if (hex.startsWith("0x")) {
+    console.log("hey");
       hex = hex.slice(2);
   }
 
