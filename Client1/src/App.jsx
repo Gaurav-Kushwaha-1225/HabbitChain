@@ -14,7 +14,7 @@ function hexToUint8Array(hex) {
     console.log("hey");
       hex = hex.slice(2);
   }
-
+console.log("f");
   // Convert hex string to Uint8Array
   let bytes = new Uint8Array(32);
   let hexBytes = Uint8Array.from(Buffer.from(hex, 'hex'));
